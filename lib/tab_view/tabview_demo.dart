@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_app/list_view_demo/home_demo.dart';
+import 'package:flutter_test_app/tab_view/bottom_ui.dart';
 import 'draw_ui.dart';
 
 class TabView extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -23,23 +27,39 @@ class TabView extends StatelessWidget {
           bottom: TabBar(
             unselectedLabelColor: Colors.white30,
             tabs: <Widget>[
-              Tab(icon: Icon(Icons.directions_boat),text: '船',),
-              Tab(icon: Icon(Icons.directions_bus),text: '公交',),
-              Tab(icon: Icon(Icons.directions_bike),text: '自行车',),
+              Tab(
+                icon: Icon(Icons.directions_boat),
+                text: '船',
+              ),
+              Tab(
+                icon: Icon(Icons.directions_bus),
+                text: '公交',
+              ),
+              Tab(
+                icon: Icon(Icons.directions_bike),
+                text: '自行车',
+              ),
             ],
-
           ),
         ),
         //显示内容设置
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.directions_boat,size: 128.0,color:Colors.black12,),
-            Icon(Icons.directions_bus,size: 128.0,color:Colors.black26,),
-            Icon(Icons.directions_bike,size: 128.0,color:Colors.black38,),
+            ListViewUi(),
+            Icon(
+              Icons.directions_bus,
+              size: 128.0,
+              color: Colors.black26,
+            ),
+            Icon(
+              Icons.directions_bike,
+              size: 128.0,
+              color: Colors.black38,
+            ),
           ],
-
         ),
         drawer: DrawUi(),
+        bottomNavigationBar: BottomUi(),
       ),
     );
   }

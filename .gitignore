@@ -1,0 +1,7 @@
+/build
+/.dart_tool
+/test
+/.idea
+flutter_test_app.iml
+pubspec.yaml
+pubspec.lock
